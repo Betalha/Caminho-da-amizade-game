@@ -1,18 +1,37 @@
-[gd_scene load_steps=4 format=3 uid="uid://hc7ea4qjlk4g"]
+[gd_scene load_steps=7 format=3 uid="uid://hc7ea4qjlk4g"]
 
 [ext_resource type="Script" path="res://Scripts/persona.gd" id="1_flreo"]
-[ext_resource type="Texture2D" uid="uid://bfng2xlglovqy" path="res://Sprites/Mario_Small_Idle.png" id="1_ja3m7"]
+[ext_resource type="Texture2D" uid="uid://bkrq5p2a1165d" path="res://Sprites/joao_back.png" id="2_imvb7"]
+[ext_resource type="Texture2D" uid="uid://b1g4m221klhxs" path="res://Sprites/joao_front.png" id="3_w3320"]
+[ext_resource type="Texture2D" uid="uid://b8aw8svel5hw1" path="res://Sprites/joao_right.png" id="4_l81uu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mikjl"]
-size = Vector2(9, 15)
+size = Vector2(13, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k814m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_imvb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_w3320")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_l81uu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Persona" type="CharacterBody2D"]
 script = ExtResource("1_flreo")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture_filter = 1
-texture = ExtResource("1_ja3m7")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 0.5)
+position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_mikjl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_k814m")
