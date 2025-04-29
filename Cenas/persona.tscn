@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://hc7ea4qjlk4g"]
+
+[ext_resource type="Script" path="res://Scripts/persona.gd" id="1_flreo"]
+[ext_resource type="Texture2D" uid="uid://bfng2xlglovqy" path="res://Sprites/Mario_Small_Idle.png" id="1_ja3m7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mikjl"]
+size = Vector2(9, 15)
+
+[node name="Persona" type="CharacterBody2D"]
+script = ExtResource("1_flreo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_ja3m7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_mikjl")
