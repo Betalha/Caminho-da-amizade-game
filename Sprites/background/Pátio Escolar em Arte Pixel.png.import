@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1g4m221klhxs"
-path="res://.godot/imported/joao_front.png-d63c2ca38fb8843595844fe654c199f5.ctex"
+uid="uid://chh7wv1f1ulnl"
+path="res://.godot/imported/Pátio Escolar em Arte Pixel.png-c86020fab31a31e3cfa8cb18a33c3c62.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/characteres/joao_front.png"
-dest_files=["res://.godot/imported/joao_front.png-d63c2ca38fb8843595844fe654c199f5.ctex"]
+source_file="res://Sprites/background/Pátio Escolar em Arte Pixel.png"
+dest_files=["res://.godot/imported/Pátio Escolar em Arte Pixel.png-c86020fab31a31e3cfa8cb18a33c3c62.ctex"]
 
 [params]
 

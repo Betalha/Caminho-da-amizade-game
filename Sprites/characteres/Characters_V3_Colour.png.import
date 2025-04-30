@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1g4m221klhxs"
-path="res://.godot/imported/joao_front.png-d63c2ca38fb8843595844fe654c199f5.ctex"
+uid="uid://dbvo1q5l47bob"
+path="res://.godot/imported/Characters_V3_Colour.png-8daa54c7321f9c954846782f36e8261d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/characteres/joao_front.png"
-dest_files=["res://.godot/imported/joao_front.png-d63c2ca38fb8843595844fe654c199f5.ctex"]
+source_file="res://Sprites/characteres/Characters_V3_Colour.png"
+dest_files=["res://.godot/imported/Characters_V3_Colour.png-8daa54c7321f9c954846782f36e8261d.ctex"]
 
 [params]
 

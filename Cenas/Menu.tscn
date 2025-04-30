@@ -1,48 +1,46 @@
 [gd_scene load_steps=2 format=3 uid="uid://bstjpf3yv1ekm"]
 
-[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_7sdbt"]
+[sub_resource type="GDScript" id="GDScript_5bgy3"]
+script/source = "extends MarginContainer
 
-[node name="Menu" type="Control"]
-layout_mode = 3
-anchors_preset = 0
-script = ExtResource("1_7sdbt")
+@onready var comecar: Button = $VBoxContainer/Comecar
+@onready var sair: Button = $VBoxContainer/Sair
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 1
+
+func _ready():
+	comecar.pressed.connect(on_start_pressed)
+	sair.pressed.connect(on_exit_pressed)
+
+func on_start_pressed():
+	get_tree().change_scene_to_file(\"res://Cenas/main.tscn\")
+
+func on_exit_pressed():
+	get_tree().quit()
+"
+
+[node name="Menu" type="MarginContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = SubResource("GDScript_5bgy3")
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.271
-anchor_top = 0.289
-anchor_right = 0.271
-anchor_bottom = 0.289
-offset_left = 0.807983
-offset_top = 0.727997
-offset_right = 173.808
-offset_bottom = 23.728
-text = "Caminhos Da Amizade"
-
-[node name="Panel" type="Panel" parent="."]
-offset_left = 381.0
-offset_top = 241.0
-offset_right = 427.0
-offset_bottom = 306.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Start" type="Button" parent="Panel/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
-text = "Start"
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
-[node name="Exit" type="Button" parent="Panel/VBoxContainer"]
+[node name="Game" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "Exit"
+size_flags_horizontal = 4
+text = "Game
+"
+
+[node name="Comecar" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Começar"
+
+[node name="Sair" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Sair"

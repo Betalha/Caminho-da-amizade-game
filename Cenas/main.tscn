@@ -1,8 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://bgqjjh3fw3vc0"]
+[gd_scene load_steps=4 format=3 uid="uid://bgqjjh3fw3vc0"]
 
 [ext_resource type="PackedScene" uid="uid://hc7ea4qjlk4g" path="res://Cenas/persona.tscn" id="1_wjikw"]
+[ext_resource type="Texture2D" uid="uid://kgbx6x56cr5n" path="res://Sprites/background/classroom.jpg" id="1_ywogv"]
+[ext_resource type="PackedScene" uid="uid://dakxff07r8k62" path="res://Cenas/Professor.tscn" id="3_3tldy"]
 
 [node name="Main" type="Node"]
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(575, 324.25)
+scale = Vector2(0.748698, 0.632324)
+texture = ExtResource("1_ywogv")
+
 [node name="Persona" parent="." instance=ExtResource("1_wjikw")]
-position = Vector2(459, 280)
+position = Vector2(530, 537)
+
+[node name="Professor" parent="." instance=ExtResource("3_3tldy")]
+position = Vector2(367, 229)

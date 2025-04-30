@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bkrq5p2a1165d"
-path="res://.godot/imported/joao_back.png-0ba7c8bef08c76155480638b5f9868be.ctex"
+path="res://.godot/imported/joao_back.png-ac9092a01b4bb45388ca829ed0c1722f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/joao_back.png"
-dest_files=["res://.godot/imported/joao_back.png-0ba7c8bef08c76155480638b5f9868be.ctex"]
+source_file="res://Sprites/characteres/joao_back.png"
+dest_files=["res://.godot/imported/joao_back.png-ac9092a01b4bb45388ca829ed0c1722f.ctex"]
 
 [params]
 

@@ -1,27 +1,37 @@
 [gd_scene load_steps=7 format=3 uid="uid://hc7ea4qjlk4g"]
 
 [ext_resource type="Script" path="res://Scripts/persona.gd" id="1_flreo"]
-[ext_resource type="Texture2D" uid="uid://bkrq5p2a1165d" path="res://Sprites/joao_back.png" id="2_imvb7"]
-[ext_resource type="Texture2D" uid="uid://b1g4m221klhxs" path="res://Sprites/joao_front.png" id="3_w3320"]
-[ext_resource type="Texture2D" uid="uid://b8aw8svel5hw1" path="res://Sprites/joao_right.png" id="4_l81uu"]
+[ext_resource type="Texture2D" uid="uid://bkrq5p2a1165d" path="res://Sprites/characteres/joao_back.png" id="2_imvb7"]
+[ext_resource type="Texture2D" uid="uid://b1g4m221klhxs" path="res://Sprites/characteres/joao_front.png" id="3_w3320"]
+[ext_resource type="Texture2D" uid="uid://b8aw8svel5hw1" path="res://Sprites/characteres/joao_right.png" id="4_l81uu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mikjl"]
-size = Vector2(13, 32)
+size = Vector2(23, 69)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_k814m"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_imvb7")
+}],
+"loop": true,
+"name": &"Idle_costas",
+"speed": 5.0
 }, {
-"duration": 1.0,
-"texture": ExtResource("3_w3320")
-}, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("4_l81uu")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle_direito",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_w3320")
+}],
+"loop": true,
+"name": &"idle_frente",
 "speed": 5.0
 }]
 
@@ -29,9 +39,10 @@ animations = [{
 script = ExtResource("1_flreo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 0)
+position = Vector2(-0.5, 1.5)
 shape = SubResource("RectangleShape2D_mikjl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.1, 0.1)
+scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_k814m")
+animation = &"idle_frente"
