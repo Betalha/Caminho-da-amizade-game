@@ -16,3 +16,4 @@ position = Vector2(530, 537)
 
 [node name="Professor" parent="." instance=ExtResource("3_3tldy")]
 position = Vector2(367, 229)
+scale = Vector2(5, 5)

@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://buwfno26qpp51"]
+
+[ext_resource type="Texture2D" uid="uid://coxam1qsqr5he" path="res://Sprites/background/Dialog_Box(16 x 16).png" id="1_0x3p4"]
+[ext_resource type="Script" path="res://Scripts/dialogo.gd" id="1_5tj5d"]
+[ext_resource type="FontFile" uid="uid://dm3ch1vmt4ixr" path="res://Fonts/font.ttf" id="3_nysib"]
+
+[node name="Dialogo" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_5tj5d")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_0x3p4")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_nysib")
+text = "
+"
+horizontal_alignment = 3
+vertical_alignment = 3
+autowrap_mode = 3
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
