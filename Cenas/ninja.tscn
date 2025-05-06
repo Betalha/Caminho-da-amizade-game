@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://4gdmqpwegj8m"]
+
+[ext_resource type="Texture2D" uid="uid://d04nl7vskmnf" path="res://Sprites/characteres/ninja game/ninja run/ninja run2.png" id="1_alah2"]
+[ext_resource type="Texture2D" uid="uid://du5hllntsqt40" path="res://Sprites/characteres/ninja game/ninja run/ninja run.png" id="2_loonf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_18u8t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_alah2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_loonf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ns6sq"]
+size = Vector2(70, 53)
+
+[node name="Ninja" type="CharacterBody2D"]
+scale = Vector2(0.201463, 0.2)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_18u8t")
+frame_progress = 0.189163
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5, -3)
+shape = SubResource("RectangleShape2D_ns6sq")
