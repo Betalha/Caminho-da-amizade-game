@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://dx6eiwfgwvdc1"]
+
+[ext_resource type="Script" path="res://Scripts/tela_final.gd" id="1_5b57q"]
+[ext_resource type="Texture2D" uid="uid://bcn1d8g40s1v4" path="res://Sprites/background/TelaFinal.png" id="2_sfjp5"]
+[ext_resource type="FontFile" uid="uid://dm3ch1vmt4ixr" path="res://Fonts/font.ttf" id="3_l33dk"]
+
+[node name="TelaFinal" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5b57q")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(574, 326.5)
+scale = Vector2(0.748698, 0.629883)
+texture = ExtResource("2_sfjp5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Game" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_l33dk")
+text = "Fim"
+
+[node name="Sair" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_l33dk")
+text = "Sair"

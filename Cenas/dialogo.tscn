@@ -19,6 +19,7 @@ offset_bottom = 40.0
 texture = ExtResource("1_0x3p4")
 
 [node name="Label" type="Label" parent="."]
+texture_filter = 1
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
