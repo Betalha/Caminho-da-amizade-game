@@ -1,0 +1,41 @@
+[gd_resource type="TileSet" load_steps=7 format=3 uid="uid://cxwjqiwt07r65"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gxmxr"]
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nxobn"]
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dlcua"]
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_njkpl"]
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b8y4r"]
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_we62r"]
+0:0/0 = 0
+0:1/0 = 0
+0:2/0 = 0
+0:3/0 = 0
+0:4/0 = 0
+0:5/0 = 0
+0:6/0 = 0
+0:7/0 = 0
+0:8/0 = 0
+0:9/0 = 0
+
+[resource]
+physics_layer_0/collision_layer = 2
+sources/0 = SubResource("TileSetAtlasSource_gxmxr")
+sources/1 = SubResource("TileSetAtlasSource_nxobn")
+sources/2 = SubResource("TileSetAtlasSource_dlcua")
+sources/3 = SubResource("TileSetAtlasSource_njkpl")
+sources/4 = SubResource("TileSetAtlasSource_b8y4r")
+sources/5 = SubResource("TileSetAtlasSource_we62r")
