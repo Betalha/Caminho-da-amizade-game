@@ -1,6 +1,6 @@
 extends Enemy
 
-@export var speed: float = -250.0
+@export var speed: float = 400.0
 @export var direction: Vector2 = Vector2.RIGHT
 
 func _ready() -> void:

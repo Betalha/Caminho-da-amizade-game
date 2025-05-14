@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d04nl7vskmnf"
-path="res://.godot/imported/ninja run2.png-d462b556149bb7bef69760ea0050cae1.ctex"
+uid="uid://du5hllntsqt40"
+path="res://.godot/imported/ninja run.png-2f2848dc9ddb1149a76e1bff3c96c0f6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/characteres/ninja game/ninja run/ninja run2.png"
-dest_files=["res://.godot/imported/ninja run2.png-d462b556149bb7bef69760ea0050cae1.ctex"]
+source_file="res://Assets/Sprites/characteres/ninja game/ninja run/ninja run.png"
+dest_files=["res://.godot/imported/ninja run.png-2f2848dc9ddb1149a76e1bff3c96c0f6.ctex"]
 
 [params]
 

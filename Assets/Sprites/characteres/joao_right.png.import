@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcn1d8g40s1v4"
-path="res://.godot/imported/TelaFinal.png-6d2e1b7cedc40acee135e6b7b06f6f1f.ctex"
+uid="uid://b8aw8svel5hw1"
+path="res://.godot/imported/joao_right.png-923bbb54d2f0ea1c651e7b50f9bdebc4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/background/TelaFinal.png"
-dest_files=["res://.godot/imported/TelaFinal.png-6d2e1b7cedc40acee135e6b7b06f6f1f.ctex"]
+source_file="res://Assets/Sprites/characteres/joao_right.png"
+dest_files=["res://.godot/imported/joao_right.png-923bbb54d2f0ea1c651e7b50f9bdebc4.ctex"]
 
 [params]
 

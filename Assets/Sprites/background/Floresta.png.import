@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkrq5p2a1165d"
-path="res://.godot/imported/joao_back.png-ac9092a01b4bb45388ca829ed0c1722f.ctex"
+uid="uid://c0f8fbraflcwe"
+path="res://.godot/imported/Floresta.png-1d1f8fba2658ddce8115c7f06d7fcd56.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/characteres/joao_back.png"
-dest_files=["res://.godot/imported/joao_back.png-ac9092a01b4bb45388ca829ed0c1722f.ctex"]
+source_file="res://Assets/Sprites/background/Floresta.png"
+dest_files=["res://.godot/imported/Floresta.png-1d1f8fba2658ddce8115c7f06d7fcd56.ctex"]
 
 [params]
 

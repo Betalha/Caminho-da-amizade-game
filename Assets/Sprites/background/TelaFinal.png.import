@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chh7wv1f1ulnl"
-path="res://.godot/imported/Pátio Escolar em Arte Pixel.png-c86020fab31a31e3cfa8cb18a33c3c62.ctex"
+uid="uid://bcn1d8g40s1v4"
+path="res://.godot/imported/TelaFinal.png-c5da7ac19a381528648afeb222e8d605.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/background/Pátio Escolar em Arte Pixel.png"
-dest_files=["res://.godot/imported/Pátio Escolar em Arte Pixel.png-c86020fab31a31e3cfa8cb18a33c3c62.ctex"]
+source_file="res://Assets/Sprites/background/TelaFinal.png"
+dest_files=["res://.godot/imported/TelaFinal.png-c5da7ac19a381528648afeb222e8d605.ctex"]
 
 [params]
 

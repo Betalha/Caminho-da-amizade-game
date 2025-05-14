@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://o8f21ina8w1l"
-path="res://.godot/imported/Brick.png-15ce9801df9d3bb4a57607b50bae5696.ctex"
+uid="uid://kgbx6x56cr5n"
+path="res://.godot/imported/classroom.jpg-45dfb8ad6ceb7f46daec09aea3bbdfba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/background/Brick.png"
-dest_files=["res://.godot/imported/Brick.png-15ce9801df9d3bb4a57607b50bae5696.ctex"]
+source_file="res://Assets/Sprites/background/classroom.jpg"
+dest_files=["res://.godot/imported/classroom.jpg-45dfb8ad6ceb7f46daec09aea3bbdfba.ctex"]
 
 [params]
 

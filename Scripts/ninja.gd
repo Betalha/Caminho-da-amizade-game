@@ -8,6 +8,7 @@ var dialogo_scene = preload("res://Cenas/dialogo.tscn")
 var dialogo_instance: Control = null
 var timer: Timer = null
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+signal foi_acertado
 
 func _ready():
 	timer = Timer.new()
@@ -23,9 +24,11 @@ func _physics_process(delta):
 
 	# Movimento horizontal
 	if Input.is_action_pressed("left"):
+		$AnimatedSprite2D.play("left")
 		velocity.x = -speed
 	elif Input.is_action_pressed("right"):
 		velocity.x = speed
+		$AnimatedSprite2D.play("right")
 	else:
 		velocity.x = 0
 
@@ -61,3 +64,8 @@ func mostrar_fala(texto: String):
 func _on_timer_timeout():
 	if dialogo_instance:
 		dialogo_instance.hide()
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area is Enemy:
+		foi_acertado.emit()

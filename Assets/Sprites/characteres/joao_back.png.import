@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtmoqjy2xrqf4"
-path="res://.godot/imported/R05.png-ea85802ecc14e061c8c2cbefbcaeba7d.ctex"
+uid="uid://bkrq5p2a1165d"
+path="res://.godot/imported/joao_back.png-62488f09863c03d03c298de9a66abae0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/characteres/R05.png"
-dest_files=["res://.godot/imported/R05.png-ea85802ecc14e061c8c2cbefbcaeba7d.ctex"]
+source_file="res://Assets/Sprites/characteres/joao_back.png"
+dest_files=["res://.godot/imported/joao_back.png-62488f09863c03d03c298de9a66abae0.ctex"]
 
 [params]
 

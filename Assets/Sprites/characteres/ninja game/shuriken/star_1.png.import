@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0f8fbraflcwe"
-path="res://.godot/imported/Floresta.png-e6cc1c9f58bc635864540ea7274d435c.ctex"
+uid="uid://buuc8y3ktesis"
+path="res://.godot/imported/star_1.png-0e285e94b2617c90377b62865ecddaa1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/background/Floresta.png"
-dest_files=["res://.godot/imported/Floresta.png-e6cc1c9f58bc635864540ea7274d435c.ctex"]
+source_file="res://Assets/Sprites/characteres/ninja game/shuriken/star_1.png"
+dest_files=["res://.godot/imported/star_1.png-0e285e94b2617c90377b62865ecddaa1.ctex"]
 
 [params]
 

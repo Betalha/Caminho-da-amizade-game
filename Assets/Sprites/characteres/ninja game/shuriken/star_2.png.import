@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buuc8y3ktesis"
-path="res://.godot/imported/star_1.png-7b5af26b3dc45461a02087da12315707.ctex"
+uid="uid://dqqua4y6j4w5y"
+path="res://.godot/imported/star_2.png-d8e7dbb608b2ed85adcfde1f68bc3ea3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/characteres/ninja game/shuriken/star_1.png"
-dest_files=["res://.godot/imported/star_1.png-7b5af26b3dc45461a02087da12315707.ctex"]
+source_file="res://Assets/Sprites/characteres/ninja game/shuriken/star_2.png"
+dest_files=["res://.godot/imported/star_2.png-d8e7dbb608b2ed85adcfde1f68bc3ea3.ctex"]
 
 [params]
 

@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://bv53mcy6bvrii"]
 
-[ext_resource type="Texture2D" uid="uid://chh7wv1f1ulnl" path="res://Sprites/background/Pátio Escolar em Arte Pixel.png" id="1_74c6f"]
+[ext_resource type="Texture2D" uid="uid://chh7wv1f1ulnl" path="res://Assets/Sprites/background/Pátio Escolar em Arte Pixel.png" id="1_vhbqv"]
 [ext_resource type="PackedScene" uid="uid://hc7ea4qjlk4g" path="res://Cenas/persona.tscn" id="2_mf1db"]
 [ext_resource type="PackedScene" uid="uid://dakxff07r8k62" path="res://Cenas/Professor.tscn" id="3_qysub"]
 
 [node name="Sprite2D" type="Sprite2D"]
 position = Vector2(575.5, 324.5)
 scale = Vector2(0.746745, 0.62793)
-texture = ExtResource("1_74c6f")
+texture = ExtResource("1_vhbqv")
 
 [node name="Persona" parent="." instance=ExtResource("2_mf1db")]
 position = Vector2(-145.297, -230.121)

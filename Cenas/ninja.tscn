@@ -1,25 +1,41 @@
-[gd_scene load_steps=6 format=3 uid="uid://4gdmqpwegj8m"]
+[gd_scene load_steps=9 format=3 uid="uid://4gdmqpwegj8m"]
 
-[ext_resource type="Texture2D" uid="uid://d04nl7vskmnf" path="res://Sprites/characteres/ninja game/ninja run/ninja run2.png" id="1_alah2"]
 [ext_resource type="Script" path="res://Scripts/ninja.gd" id="1_ho5l2"]
-[ext_resource type="Texture2D" uid="uid://du5hllntsqt40" path="res://Sprites/characteres/ninja game/ninja run/ninja run.png" id="2_loonf"]
+[ext_resource type="Texture2D" uid="uid://dslrtnqvtpgld" path="res://Assets/Sprites/characteres/ninja game/ninja run/ninja run2 left.png" id="2_jo6a7"]
+[ext_resource type="Texture2D" uid="uid://1kpa30rbmoxy" path="res://Assets/Sprites/characteres/ninja game/ninja run/ninja run left.png" id="3_165lx"]
+[ext_resource type="Texture2D" uid="uid://d04nl7vskmnf" path="res://Assets/Sprites/characteres/ninja game/ninja run/ninja run2.png" id="4_ep8re"]
+[ext_resource type="Texture2D" uid="uid://du5hllntsqt40" path="res://Assets/Sprites/characteres/ninja game/ninja run/ninja run.png" id="5_qlxdx"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_18u8t"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_alah2")
+"texture": ExtResource("2_jo6a7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_loonf")
+"texture": ExtResource("3_165lx")
 }],
 "loop": true,
-"name": &"default",
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ep8re")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qlxdx")
+}],
+"loop": true,
+"name": &"right",
 "speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ns6sq"]
-size = Vector2(70, 53)
+size = Vector2(66.4286, 50.056)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y1clb"]
+size = Vector2(60.7143, 48.8506)
 
 [node name="Ninja" type="CharacterBody2D"]
 scale = Vector2(0.7, 0.696)
@@ -27,8 +43,16 @@ script = ExtResource("1_ho5l2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_18u8t")
-frame_progress = 0.189163
+animation = &"left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(5, -3)
+position = Vector2(-3.21429, 2.03951)
 shape = SubResource("RectangleShape2D_ns6sq")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-3.21429, 1.43678)
+shape = SubResource("RectangleShape2D_y1clb")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

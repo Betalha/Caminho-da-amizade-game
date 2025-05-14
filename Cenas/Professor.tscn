@@ -1,21 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dakxff07r8k62"]
-
-[ext_resource type="Texture2D" uid="uid://dbvo1q5l47bob" path="res://Sprites/characteres/Characters_V3_Colour.png" id="1_5ia1e"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sob1p"]
-atlas = ExtResource("1_5ia1e")
-region = Rect2(0, 32, 17, 16)
+[gd_scene load_steps=3 format=3 uid="uid://dakxff07r8k62"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sl0jd"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sob1p")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ueh40"]
 size = Vector2(9, 13)
@@ -25,6 +10,7 @@ size = Vector2(9, 13)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_sl0jd")
+frame_progress = 0.423318
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 0.5)

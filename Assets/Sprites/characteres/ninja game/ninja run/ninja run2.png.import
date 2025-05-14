@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1g4m221klhxs"
-path="res://.godot/imported/joao_front.png-d63c2ca38fb8843595844fe654c199f5.ctex"
+uid="uid://d04nl7vskmnf"
+path="res://.godot/imported/ninja run2.png-2b93f69ac17610727776b15a3731eb2d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/characteres/joao_front.png"
-dest_files=["res://.godot/imported/joao_front.png-d63c2ca38fb8843595844fe654c199f5.ctex"]
+source_file="res://Assets/Sprites/characteres/ninja game/ninja run/ninja run2.png"
+dest_files=["res://.godot/imported/ninja run2.png-2b93f69ac17610727776b15a3731eb2d.ctex"]
 
 [params]
 

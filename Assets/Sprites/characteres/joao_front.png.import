@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kgbx6x56cr5n"
-path="res://.godot/imported/classroom.jpg-1cb2f79faed53a839b2534ad37c3267a.ctex"
+uid="uid://b1g4m221klhxs"
+path="res://.godot/imported/joao_front.png-9a5e9bff8cda89508d92694b9ca072a2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/background/classroom.jpg"
-dest_files=["res://.godot/imported/classroom.jpg-1cb2f79faed53a839b2534ad37c3267a.ctex"]
+source_file="res://Assets/Sprites/characteres/joao_front.png"
+dest_files=["res://.godot/imported/joao_front.png-9a5e9bff8cda89508d92694b9ca072a2.ctex"]
 
 [params]
 

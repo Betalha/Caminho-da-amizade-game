@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://cjbvjkrsqh605"]
+[gd_scene load_steps=11 format=3 uid="uid://cjbvjkrsqh605"]
 
 [ext_resource type="Script" path="res://Scripts/nv_ninja.gd" id="1_c2wg2"]
 [ext_resource type="PackedScene" uid="uid://4gdmqpwegj8m" path="res://Cenas/ninja.tscn" id="2_8gimg"]
-[ext_resource type="Texture2D" uid="uid://c0f8fbraflcwe" path="res://Sprites/background/Floresta.png" id="2_silgh"]
+[ext_resource type="Texture2D" uid="uid://c0f8fbraflcwe" path="res://Assets/Sprites/background/Floresta.png" id="2_eyd64"]
+[ext_resource type="Texture2D" uid="uid://dipiu6nt71tyl" path="res://Assets/Sprites/background/Floresta - Copy.png" id="3_b02wj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7oy2t"]
 size = Vector2(506, 251.5)
@@ -11,19 +12,37 @@ size = Vector2(506, 251.5)
 size = Vector2(404, 152)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_enq1s"]
-size = Vector2(1253, 122)
+size = Vector2(3601.5, 122)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e3lf0"]
-size = Vector2(719, 184)
+size = Vector2(1261.5, 184)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y26cg"]
+size = Vector2(74.5, 296)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mnoh7"]
+size = Vector2(111, 339)
 
 [node name="nv_ninja" type="Node"]
 script = ExtResource("1_c2wg2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_silgh")
+texture = ExtResource("2_eyd64")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(2552, 0)
+texture = ExtResource("3_b02wj")
 
 [node name="Ninja" parent="." instance=ExtResource("2_8gimg")]
 position = Vector2(-852, -6)
+
+[node name="Label" type="Label" parent="Ninja"]
+offset_left = -546.0
+offset_top = -309.0
+offset_right = 122.0
+offset_bottom = -172.0
+theme_override_font_sizes/font_size = 40
+text = "dawdawdawd"
 
 [node name="Camera2D" type="Camera2D" parent="Ninja"]
 scale = Vector2(-518537, -221.243)
@@ -33,21 +52,41 @@ zoom = Vector2(1.5, 1.5)
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-1017, 206)
+position = Vector2(-1010, 192)
 shape = SubResource("RectangleShape2D_7oy2t")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-706, 405)
+position = Vector2(-704, 400)
 shape = SubResource("RectangleShape2D_8jb2l")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(100, 515)
+position = Vector2(1274.25, 515)
 shape = SubResource("RectangleShape2D_enq1s")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1000, 419)
+position = Vector2(1271.25, 419)
 shape = SubResource("RectangleShape2D_e3lf0")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-969, -88)
+shape = SubResource("RectangleShape2D_y26cg")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(3516, -102)
+shape = SubResource("RectangleShape2D_mnoh7")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(3256, 408)
+shape = SubResource("RectangleShape2D_8jb2l")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(3566, 207)
+shape = SubResource("RectangleShape2D_7oy2t")
 
 [node name="shuriken_spawn_timer" type="Timer" parent="."]
 
+[node name="count_down" type="Timer" parent="."]
+
+[connection signal="foi_acertado" from="Ninja" to="." method="_on_ninja_foi_acertado"]
 [connection signal="timeout" from="shuriken_spawn_timer" to="." method="_on_shuriken_spawn_timer_timeout"]
+[connection signal="timeout" from="count_down" to="." method="_on_count_down_timeout"]
