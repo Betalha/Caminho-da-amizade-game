@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://cjbvjkrsqh605"]
 
-[ext_resource type="Script" path="res://Cenas/nv_ninja.gd" id="1_cokub"]
+[ext_resource type="Script" path="res://Scripts/nv_ninja.gd" id="1_c2wg2"]
 [ext_resource type="PackedScene" uid="uid://4gdmqpwegj8m" path="res://Cenas/ninja.tscn" id="2_8gimg"]
 [ext_resource type="Texture2D" uid="uid://c0f8fbraflcwe" path="res://Sprites/background/Floresta.png" id="2_silgh"]
 
@@ -17,7 +17,7 @@ size = Vector2(1253, 122)
 size = Vector2(719, 184)
 
 [node name="nv_ninja" type="Node"]
-script = ExtResource("1_cokub")
+script = ExtResource("1_c2wg2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_silgh")
@@ -47,3 +47,7 @@ shape = SubResource("RectangleShape2D_enq1s")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(1000, 419)
 shape = SubResource("RectangleShape2D_e3lf0")
+
+[node name="shuriken_spawn_timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="shuriken_spawn_timer" to="." method="_on_shuriken_spawn_timer_timeout"]

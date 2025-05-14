@@ -1,9 +1,11 @@
 extends CharacterBody2D
 
 @export var speed: float = 400.0
+@export var jump_force: float = -900.0
+
 @onready var ui_layer = get_tree().get_current_scene() # ou outro node onde o balão deve ser adicionado
 var dialogo_scene = preload("res://Cenas/dialogo.tscn")
-var dialogo_instance : Control = null
+var dialogo_instance: Control = null
 var timer: Timer = null
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -11,31 +13,27 @@ func _ready():
 	timer = Timer.new()
 	timer.wait_time = 3.0
 	timer.one_shot = true
-	timer.timeout.connect(Callable(self, "_on_timer_timeout"))  # <-- CORRETO
+	timer.timeout.connect(Callable(self, "_on_timer_timeout"))
 	add_child(timer)
 	set_physics_process(true)
 
-
 func _physics_process(delta):
-	var direction = Vector2.ZERO
+	# Aplica gravidade
+	velocity.y += gravity * delta * 2
 
-	velocity.y += gravity * delta
-	
-	if Input.is_action_pressed("up"):
-		direction.y -= 1
-	if Input.is_action_pressed("down"):
-		direction.y += 1
+	# Movimento horizontal
 	if Input.is_action_pressed("left"):
-		direction.x -= 1
-	if Input.is_action_pressed("right"):
-		direction.x += 1
+		velocity.x = -speed
+	elif Input.is_action_pressed("right"):
+		velocity.x = speed
+	else:
+		velocity.x = 0
 
-	if direction != Vector2.ZERO:
-		direction = direction.normalized()
+	# Pulo
+	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		velocity.y = jump_force
 
-	velocity = direction * speed
-
-	# Move e depois checa colisões
+	# Move personagem e lida com colisões
 	move_and_slide()
 
 	# Verifica colisões com NPCs

@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://4gdmqpwegj8m"]
 
 [ext_resource type="Texture2D" uid="uid://d04nl7vskmnf" path="res://Sprites/characteres/ninja game/ninja run/ninja run2.png" id="1_alah2"]
-[ext_resource type="Script" path="res://Cenas/ninja.gd" id="1_fh4sj"]
+[ext_resource type="Script" path="res://Scripts/ninja.gd" id="1_ho5l2"]
 [ext_resource type="Texture2D" uid="uid://du5hllntsqt40" path="res://Sprites/characteres/ninja game/ninja run/ninja run.png" id="2_loonf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_18u8t"]
@@ -23,7 +23,7 @@ size = Vector2(70, 53)
 
 [node name="Ninja" type="CharacterBody2D"]
 scale = Vector2(0.7, 0.696)
-script = ExtResource("1_fh4sj")
+script = ExtResource("1_ho5l2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_18u8t")
