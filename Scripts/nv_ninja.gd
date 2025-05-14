@@ -29,3 +29,5 @@ func _on_ninja_foi_acertado() -> void:
 func _on_count_down_timeout() -> void:
 	count_down -= 1
 	$Ninja/Label.text = str(count_down)
+	if count_down < 1:
+		get_tree().change_scene_to_file("res://Cenas/Patio.tscn")
