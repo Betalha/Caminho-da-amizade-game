@@ -6,5 +6,6 @@ extends Enemy
 func _ready() -> void:
 	$AnimatedSprite2D.play("default")
 
+
 func _physics_process(delta: float) -> void:
 	position += direction.normalized() * speed * delta

@@ -40,7 +40,11 @@ func _physics_process(delta):
 		if collider and collider.is_in_group("npc"):
 			print("Colidiu com NPC: ", collider.name)
 			mostrar_fala("Olá, eu sou um NPC!")
-			break # Evita mostrar múltiplas vezes se colidir com mais de um NPC
+			break
+		if collider and collider.is_in_group("colisor"):
+			get_tree().change_scene_to_file("res://Cenas/Patio.tscn")
+		if collider and collider.is_in_group("children1"):
+			get_tree().change_scene_to_file("res://Cenas/freeway.tscn")
 
 # Função que mostra o balão de fala
 func mostrar_fala(texto: String):

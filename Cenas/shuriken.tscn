@@ -1,17 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://26sa1ex7fy08"]
+[gd_scene load_steps=6 format=3 uid="uid://ckwirp2610346"]
 
 [ext_resource type="Script" path="res://Scripts/shuriken.gd" id="1_dq1yd"]
-[ext_resource type="Texture2D" uid="uid://buuc8y3ktesis" path="res://Assets/Sprites/characteres/ninja game/shuriken/star_1.png" id="2_20oqk"]
-[ext_resource type="Texture2D" uid="uid://dqqua4y6j4w5y" path="res://Assets/Sprites/characteres/ninja game/shuriken/star_2.png" id="3_ilv81"]
+[ext_resource type="Texture2D" uid="uid://buuc8y3ktesis" path="res://Assets/Sprites/characteres/ninja game/shuriken/star_1.png" id="2_oofxh"]
+[ext_resource type="Texture2D" uid="uid://dqqua4y6j4w5y" path="res://Assets/Sprites/characteres/ninja game/shuriken/star_2.png" id="3_bp7ub"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ubv80"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_20oqk")
+"duration": 1.1,
+"texture": ExtResource("2_oofxh")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_ilv81")
+"texture": ExtResource("3_bp7ub")
 }],
 "loop": true,
 "name": &"default",
@@ -22,7 +22,6 @@ animations = [{
 radius = 25.0799
 
 [node name="shuriken" type="Area2D"]
-scale = Vector2(0.8, 0.8)
 script = ExtResource("1_dq1yd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

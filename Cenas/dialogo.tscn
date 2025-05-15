@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://buwfno26qpp51"]
 
-[ext_resource type="Texture2D" uid="uid://coxam1qsqr5he" path="res://Sprites/background/Dialog_Box(16 x 16).png" id="1_0x3p4"]
+[ext_resource type="Texture2D" uid="uid://coxam1qsqr5he" path="res://Assets/Sprites/background/Dialog_Box(16 x 16).png" id="1_0x3p4"]
 [ext_resource type="Script" path="res://Scripts/dialogo.gd" id="1_5tj5d"]
 [ext_resource type="FontFile" uid="uid://dm3ch1vmt4ixr" path="res://Fonts/font.ttf" id="3_nysib"]
 

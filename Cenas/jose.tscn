@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bork0yy3xjdtd"]
+
+[ext_resource type="Texture2D" uid="uid://cxaat7bqnhimi" path="res://Assets/Sprites/characteres/FreeWay/Personagem Secundario/jose/SpriteSheet.png" id="1_f7xm2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvck4"]
+atlas = ExtResource("1_f7xm2")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sl0jd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hvck4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ueh40"]
+size = Vector2(10, 14)
+
+[node name="jose" type="StaticBody2D" groups=["npc"]]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_sl0jd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_ueh40")

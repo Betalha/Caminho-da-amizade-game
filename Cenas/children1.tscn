@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpoajy68l145t"]
+
+[ext_resource type="Texture2D" uid="uid://cxaat7bqnhimi" path="res://Assets/Sprites/characteres/FreeWay/Personagem Secundario/jose/SpriteSheet.png" id="1_v77ns"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_71vgs"]
+size = Vector2(11, 14)
+
+[node name="Children" type="StaticBody2D" groups=["children1"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_v77ns")
+hframes = 4
+vframes = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_71vgs")
