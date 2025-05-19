@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://bv53mcy6bvrii"]
+[gd_scene load_steps=8 format=3 uid="uid://bv53mcy6bvrii"]
 
 [ext_resource type="Texture2D" uid="uid://chh7wv1f1ulnl" path="res://Assets/Sprites/background/Pátio Escolar em Arte Pixel.png" id="1_vhbqv"]
 [ext_resource type="PackedScene" uid="uid://hc7ea4qjlk4g" path="res://Cenas/persona.tscn" id="2_mf1db"]
 [ext_resource type="PackedScene" uid="uid://cp5vbnb82taau" path="res://Cenas/Professor.tscn" id="3_qysub"]
 [ext_resource type="PackedScene" uid="uid://cpoajy68l145t" path="res://Cenas/children1.tscn" id="4_srybd"]
+[ext_resource type="Script" path="res://Scripts/professor_patio.gd" id="5_0jxd5"]
+[ext_resource type="Texture2D" uid="uid://ipfhonqgf50f" path="res://Assets/Sprites/background/ChatGPT Image 19 de mai. de 2025, 15_08_19.png" id="6_qy804"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4081q"]
+size = Vector2(127, 122)
 
 [node name="Sprite2D" type="Sprite2D"]
 position = Vector2(575.5, 324.5)
@@ -20,3 +25,19 @@ scale = Vector2(5, 5)
 [node name="Children" parent="." instance=ExtResource("4_srybd")]
 position = Vector2(-327.421, 309.748)
 scale = Vector2(3.22, 3.22)
+
+[node name="professor" type="Node2D" parent="."]
+position = Vector2(83.6966, -254.009)
+script = ExtResource("5_0jxd5")
+
+[node name="texture" type="Sprite2D" parent="professor"]
+visible = false
+texture_filter = 1
+texture = ExtResource("6_qy804")
+
+[node name="area_sing" type="Area2D" parent="professor"]
+position = Vector2(-287.643, -484.824)
+
+[node name="collision" type="CollisionShape2D" parent="professor/area_sing"]
+position = Vector2(284.964, 481.639)
+shape = SubResource("RectangleShape2D_4081q")

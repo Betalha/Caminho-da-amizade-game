@@ -5,7 +5,7 @@ extends CharacterBody2D
 var dialogo_scene = preload("res://Cenas/dialogo.tscn")
 var dialogo_instance : Control = null
 var timer: Timer = null
-
+const PATIO = preload("res://Cenas/Patio.tscn")
 func _ready():
 	timer = Timer.new()
 	timer.wait_time = 3.0
@@ -38,27 +38,8 @@ func _physics_process(delta):
 		var collision = get_slide_collision(i)
 		var collider = collision.get_collider()
 		if collider and collider.is_in_group("npc"):
-			print("Colidiu com NPC: ", collider.name)
-			mostrar_fala("Olá, eu sou um NPC!")
-			break
+			pass
 		if collider and collider.is_in_group("colisor"):
 			get_tree().change_scene_to_file("res://Cenas/Patio.tscn")
 		if collider and collider.is_in_group("children1"):
 			get_tree().change_scene_to_file("res://Cenas/freeway.tscn")
-
-# Função que mostra o balão de fala
-func mostrar_fala(texto: String):
-	if dialogo_instance == null:
-		dialogo_instance = dialogo_scene.instantiate()
-		print("Balão de diálogo instanciado!")
-		var npc = get_slide_collision(0).get_collider()
-		if npc:
-			npc.add_child(dialogo_instance)
-	dialogo_instance.show()
-	dialogo_instance.position = Vector2(0, -50)
-	dialogo_instance.get_node("Label").text = texto
-	timer.start()
-
-func _on_timer_timeout():
-	if dialogo_instance:
-		dialogo_instance.hide()
