@@ -42,5 +42,7 @@ func _physics_process(delta: float) -> void:
 		var collider = collision.get_collider()
 		if collider and collider.is_in_group("npc"):
 			get_tree().change_scene_to_file("res://Cenas/Patio.tscn")
+			return
 		if collider and collider.is_in_group("monstro"):
 			get_tree().change_scene_to_file("res://Cenas/freeway.tscn")
+			return

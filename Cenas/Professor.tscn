@@ -1,41 +1,31 @@
-<<<<<<< HEAD
-[gd_scene load_steps=3 format=3 uid="uid://dakxff07r8k62"]
+[gd_scene load_steps=5 format=3 uid="uid://cp5vbnb82taau"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_sl0jd"]
-=======
-[gd_scene load_steps=5 format=3 uid="uid://dakxff07r8k62"]
+[ext_resource type="Texture2D" uid="uid://dbvo1q5l47bob" path="res://Assets/Sprites/characteres/Characters_V3_Colour.png" id="1_4h8l3"]
 
-[ext_resource type="Texture2D" uid="uid://dbvo1q5l47bob" path="res://Sprites/characteres/Characters_V3_Colour.png" id="1_5ia1e"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pj1qc"]
-atlas = ExtResource("1_5ia1e")
-region = Rect2(0, 32, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_dq0u7"]
+atlas = ExtResource("1_4h8l3")
+region = Rect2(0, 32, 17, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sl0jd"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pj1qc")
+"texture": SubResource("AtlasTexture_dq0u7")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }]
->>>>>>> 9a5152a (adicionar o freeway e interações na cena patio)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ueh40"]
-size = Vector2(10, 14)
+size = Vector2(9, 13)
 
 [node name="StaticBody2D" type="StaticBody2D" groups=["npc"]]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_sl0jd")
-<<<<<<< HEAD
 frame_progress = 0.423318
-=======
-frame_progress = 0.663555
->>>>>>> 9a5152a (adicionar o freeway e interações na cena patio)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 0.5)
