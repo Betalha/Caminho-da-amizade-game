@@ -18,9 +18,9 @@ texture = ExtResource("1_vhbqv")
 [node name="Persona" parent="." instance=ExtResource("2_mf1db")]
 position = Vector2(-145.297, -230.121)
 
-[node name="StaticBody2D" parent="." instance=ExtResource("3_qysub")]
+[node name="Professor" parent="." instance=ExtResource("3_qysub")]
 position = Vector2(83.6966, -263.565)
-scale = Vector2(5, 5)
+scale = Vector2(7.5, 7.5)
 
 [node name="Children" parent="." instance=ExtResource("4_srybd")]
 position = Vector2(-327.421, 309.748)

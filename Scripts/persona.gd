@@ -5,7 +5,6 @@ extends CharacterBody2D
 var dialogo_scene = preload("res://Cenas/dialogo.tscn")
 var dialogo_instance : Control = null
 var timer: Timer = null
-const PATIO = preload("res://Cenas/Patio.tscn")
 func _ready():
 	timer = Timer.new()
 	timer.wait_time = 3.0

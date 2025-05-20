@@ -1,20 +1,24 @@
-[gd_scene load_steps=5 format=3 uid="uid://cp5vbnb82taau"]
+[gd_scene load_steps=6 format=3 uid="uid://cp5vbnb82taau"]
 
-[ext_resource type="Texture2D" uid="uid://dbvo1q5l47bob" path="res://Assets/Sprites/characteres/Characters_V3_Colour.png" id="1_4h8l3"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dq0u7"]
-atlas = ExtResource("1_4h8l3")
-region = Rect2(0, 32, 17, 16)
+[ext_resource type="Texture2D" uid="uid://ceqv7sxeg6n50" path="res://Assets/Sprites/characteres/professor/Imagem1.png" id="1_30a31"]
+[ext_resource type="Texture2D" uid="uid://c7exe262es6lq" path="res://Assets/Sprites/characteres/professor/Imagem2.png" id="2_burk2"]
+[ext_resource type="Texture2D" uid="uid://bfbsqt32m8bqq" path="res://Assets/Sprites/characteres/professor/Imagem3.png" id="3_l8rim"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sl0jd"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dq0u7")
+"texture": ExtResource("1_30a31")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_burk2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_l8rim")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 8.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ueh40"]
@@ -24,8 +28,12 @@ size = Vector2(9, 13)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
+position = Vector2(0, 3.72529e-09)
+scale = Vector2(0.0189444, 0.0156798)
 sprite_frames = SubResource("SpriteFrames_sl0jd")
-frame_progress = 0.423318
+autoplay = "default"
+frame = 1
+frame_progress = 0.717422
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 0.5)
