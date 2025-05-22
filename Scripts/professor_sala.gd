@@ -8,11 +8,12 @@ const lines: Array[String] = [
 ]
 
 func _unhandled_input(event):
-	if area_sing.get_overlapping_bodies().size() > 0:
-		texture.show()
-		if event.is_action_pressed("interact") && !DialogManeger.is_message_active:
-			texture.hide()
-			DialogManeger.start_message(global_position, lines)
-		else:
-			texture.hide()
-			
+	if event.is_action_pressed("interact"):
+		var bodies = area_sing.get_overlapping_bodies()
+		for body in bodies:
+			if body.is_in_group("player") and !DialogManeger.is_message_active:
+				texture.hide()
+				DialogManeger.start_message(global_position, lines)
+				return
+		# Fora da área ou já tem diálogo ativo
+		texture.hide()

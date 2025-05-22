@@ -20,12 +20,13 @@ position = Vector2(577, 326)
 scale = Vector2(0.748698, 0.632324)
 texture = ExtResource("1_2k7aj")
 
-[node name="Persona" parent="." instance=ExtResource("1_wjikw")]
+[node name="Persona" parent="." groups=["player"] instance=ExtResource("1_wjikw")]
 position = Vector2(524, 486)
+scale = Vector2(3, 3)
 
 [node name="Professor" parent="." instance=ExtResource("3_3tldy")]
 position = Vector2(367, 229)
-scale = Vector2(5, 5)
+scale = Vector2(9, 9)
 
 [node name="Saida" type="StaticBody2D" parent="." groups=["colisor"]]
 

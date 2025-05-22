@@ -1,17 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://cpoajy68l145t"]
+[gd_scene load_steps=4 format=3 uid="uid://cpoajy68l145t"]
 
-[ext_resource type="Texture2D" uid="uid://cxaat7bqnhimi" path="res://Assets/Sprites/characteres/FreeWay/Personagem Secundario/jose/SpriteSheet.png" id="1_v77ns"]
+[ext_resource type="Texture2D" uid="uid://ogd1bmay7ug6" path="res://Assets/Sprites/characteres/Imagem27.png" id="1_nfu5r"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f7aau"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nfu5r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_71vgs"]
 size = Vector2(11, 14)
 
 [node name="Children" type="StaticBody2D" groups=["children1"]]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture_filter = 1
-texture = ExtResource("1_v77ns")
-hframes = 4
-vframes = 7
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2.38419e-07, 0)
+scale = Vector2(0.0244253, 0.0155286)
+sprite_frames = SubResource("SpriteFrames_f7aau")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 1)
