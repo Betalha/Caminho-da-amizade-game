@@ -1,34 +1,124 @@
-[gd_scene load_steps=8 format=3 uid="uid://bv53mcy6bvrii"]
+[gd_scene load_steps=30 format=3 uid="uid://bv53mcy6bvrii"]
 
 [ext_resource type="Texture2D" uid="uid://chh7wv1f1ulnl" path="res://Assets/Sprites/background/Pátio Escolar em Arte Pixel.png" id="1_vhbqv"]
 [ext_resource type="PackedScene" uid="uid://hc7ea4qjlk4g" path="res://Cenas/persona.tscn" id="2_mf1db"]
 [ext_resource type="PackedScene" uid="uid://cp5vbnb82taau" path="res://Cenas/Professor.tscn" id="3_qysub"]
 [ext_resource type="PackedScene" uid="uid://cpoajy68l145t" path="res://Cenas/children1.tscn" id="4_srybd"]
 [ext_resource type="Script" path="res://Scripts/professor_patio.gd" id="5_0jxd5"]
+[ext_resource type="Script" path="res://Scripts/no_jose_patio.gd" id="5_4jxhi"]
 [ext_resource type="Texture2D" uid="uid://ipfhonqgf50f" path="res://Assets/Sprites/background/ChatGPT Image 19 de mai. de 2025, 15_08_19.png" id="6_qy804"]
+[ext_resource type="PackedScene" uid="uid://7co2mtmrgy2a" path="res://Cenas/maria.tscn" id="7_h7i8m"]
+[ext_resource type="Script" path="res://Scripts/no_maria_patio.gd" id="8_oqe3b"]
+[ext_resource type="PackedScene" uid="uid://bqp1kfdg8v4cn" path="res://Cenas/joao.tscn" id="10_we0ce"]
+[ext_resource type="Script" path="res://Scripts/no_joao_patio.gd" id="11_fon5r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hil5q"]
+size = Vector2(27.6767, 22.4218)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ayr7k"]
+size = Vector2(114.653, 128.708)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4081q"]
 size = Vector2(127, 122)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pl8ww"]
+size = Vector2(20.109, 886.866)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ttwti"]
+size = Vector2(192, 122)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1tctf"]
+size = Vector2(148, 126.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_avf7k"]
+size = Vector2(272, 52)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oowl7"]
+size = Vector2(265.5, 50.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xfp0h"]
+size = Vector2(203.528, 58.9238)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h0f1k"]
+radius = 82.6753
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_66j40"]
+size = Vector2(160.859, 103.67)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rg1t2"]
+size = Vector2(36.1569, 70.0715)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1infw"]
+radius = 71.7548
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rukqh"]
+radius = 71.4333
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q6dba"]
+size = Vector2(25.5, 122.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ofp7s"]
+size = Vector2(45.75, 85)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p2mua"]
+size = Vector2(46.5, 54)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ssnid"]
+size = Vector2(124.541, 167.216)
 
 [node name="Sprite2D" type="Sprite2D"]
 position = Vector2(575.5, 324.5)
 scale = Vector2(0.746745, 0.62793)
 texture = ExtResource("1_vhbqv")
 
-[node name="Persona" parent="." instance=ExtResource("2_mf1db")]
-position = Vector2(-145.297, -230.121)
+[node name="Persona" parent="." groups=["Player_Patio"] instance=ExtResource("2_mf1db")]
+position = Vector2(-154.671, -61.3125)
 scale = Vector2(3, 3)
 
 [node name="Professor" parent="." instance=ExtResource("3_qysub")]
-position = Vector2(83.6966, -263.565)
+position = Vector2(165.384, -82.0155)
 scale = Vector2(9, 9)
 
 [node name="Children" parent="." instance=ExtResource("4_srybd")]
 position = Vector2(-327.421, 309.748)
 scale = Vector2(5, 5)
 
+[node name="No_jose_patio" type="Node2D" parent="Children"]
+position = Vector2(-1.33915, -21.34)
+script = ExtResource("5_4jxhi")
+
+[node name="Sprite2D" type="Sprite2D" parent="Children/No_jose_patio"]
+visible = false
+texture = ExtResource("6_qy804")
+
+[node name="Area2D" type="Area2D" parent="Children/No_jose_patio"]
+position = Vector2(0, 15.2883)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Children/No_jose_patio/Area2D"]
+position = Vector2(9.90968, 5.73313)
+shape = SubResource("RectangleShape2D_hil5q")
+
+[node name="Maria" parent="." instance=ExtResource("7_h7i8m")]
+position = Vector2(-636.764, -37.4246)
+scale = Vector2(1, 1)
+
+[node name="No_maria_patio" type="Node2D" parent="Maria"]
+position = Vector2(72.3138, 4.7776)
+script = ExtResource("8_oqe3b")
+
+[node name="Sprite2D" type="Sprite2D" parent="Maria/No_maria_patio"]
+visible = false
+texture = ExtResource("6_qy804")
+
+[node name="Area2D" type="Area2D" parent="Maria/No_maria_patio"]
+position = Vector2(22.7655, -6.37014)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maria/No_maria_patio/Area2D"]
+position = Vector2(79.2661, 88.5291)
+shape = SubResource("RectangleShape2D_ayr7k")
+
 [node name="professor" type="Node2D" parent="."]
-position = Vector2(83.6966, -254.009)
+position = Vector2(164.045, -72.4603)
 script = ExtResource("5_0jxd5")
 
 [node name="texture" type="Sprite2D" parent="professor"]
@@ -40,5 +130,133 @@ texture = ExtResource("6_qy804")
 position = Vector2(-287.643, -484.824)
 
 [node name="collision" type="CollisionShape2D" parent="professor/area_sing"]
-position = Vector2(284.964, 481.639)
+position = Vector2(287.643, 480.046)
 shape = SubResource("RectangleShape2D_4081q")
+
+[node name="Colisoes_Cenario" type="Node" parent="."]
+
+[node name="Parede" type="StaticBody2D" parent="Colisoes_Cenario"]
+position = Vector2(575.5, 324.5)
+scale = Vector2(0.746745, 0.62793)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colisoes_Cenario/Parede"]
+position = Vector2(-665.566, -41.318)
+shape = SubResource("RectangleShape2D_pl8ww")
+
+[node name="Parede2" type="StaticBody2D" parent="Colisoes_Cenario"]
+position = Vector2(575.5, 324.5)
+scale = Vector2(0.746745, 0.62793)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colisoes_Cenario/Parede2"]
+position = Vector2(565.789, -43.7947)
+shape = SubResource("RectangleShape2D_pl8ww")
+
+[node name="Parede3" type="StaticBody2D" parent="Colisoes_Cenario"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colisoes_Cenario/Parede3"]
+position = Vector2(697, 88)
+shape = SubResource("RectangleShape2D_ttwti")
+
+[node name="Parede4" type="StaticBody2D" parent="Colisoes_Cenario"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colisoes_Cenario/Parede4"]
+position = Vector2(377, 88.75)
+shape = SubResource("RectangleShape2D_1tctf")
+
+[node name="Parede5" type="StaticBody2D" parent="Colisoes_Cenario"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colisoes_Cenario/Parede5"]
+position = Vector2(208, 597)
+shape = SubResource("RectangleShape2D_avf7k")
+
+[node name="Parede6" type="StaticBody2D" parent="Colisoes_Cenario"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colisoes_Cenario/Parede6"]
+position = Vector2(745.25, 595.75)
+shape = SubResource("RectangleShape2D_oowl7")
+
+[node name="Banco" type="StaticBody2D" parent="Colisoes_Cenario"]
+position = Vector2(575.5, 324.5)
+scale = Vector2(0.746745, 0.62793)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colisoes_Cenario/Banco"]
+position = Vector2(-454.629, -47.776)
+shape = SubResource("RectangleShape2D_xfp0h")
+
+[node name="Arvore" type="StaticBody2D" parent="Colisoes_Cenario"]
+position = Vector2(575.5, 324.5)
+scale = Vector2(0.746745, 0.62793)
+
+[node name="Folha" type="CollisionShape2D" parent="Colisoes_Cenario/Arvore"]
+position = Vector2(-446.605, -341.599)
+shape = SubResource("CircleShape2D_h0f1k")
+
+[node name="Vaso" type="CollisionShape2D" parent="Colisoes_Cenario/Arvore"]
+position = Vector2(-445.428, -194.93)
+shape = SubResource("RectangleShape2D_66j40")
+
+[node name="Arvore2" type="StaticBody2D" parent="Colisoes_Cenario"]
+position = Vector2(575.5, 324.5)
+scale = Vector2(0.746745, 0.62793)
+
+[node name="Folha" type="CollisionShape2D" parent="Colisoes_Cenario/Arvore2"]
+position = Vector2(380.987, -314.526)
+shape = SubResource("CircleShape2D_h0f1k")
+
+[node name="Vaso" type="CollisionShape2D" parent="Colisoes_Cenario/Arvore2"]
+position = Vector2(374.21, -197.552)
+shape = SubResource("RectangleShape2D_66j40")
+
+[node name="Arvore3" type="StaticBody2D" parent="Colisoes_Cenario"]
+position = Vector2(575.5, 324.5)
+scale = Vector2(0.746745, 0.62793)
+
+[node name="Tronco" type="CollisionShape2D" parent="Colisoes_Cenario/Arvore3"]
+position = Vector2(-541.015, 306.563)
+shape = SubResource("RectangleShape2D_rg1t2")
+
+[node name="Folha" type="CollisionShape2D" parent="Colisoes_Cenario/Arvore3"]
+position = Vector2(-543.023, 198.271)
+shape = SubResource("CircleShape2D_1infw")
+
+[node name="Arbusto" type="StaticBody2D" parent="Colisoes_Cenario"]
+position = Vector2(575.5, 324.5)
+scale = Vector2(0.746745, 0.62793)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colisoes_Cenario/Arbusto"]
+position = Vector2(477.405, 392.56)
+shape = SubResource("CircleShape2D_rukqh")
+
+[node name="Cesta" type="StaticBody2D" parent="Colisoes_Cenario"]
+
+[node name="Barra" type="CollisionShape2D" parent="Colisoes_Cenario/Cesta"]
+position = Vector2(929.25, 384.75)
+shape = SubResource("RectangleShape2D_q6dba")
+
+[node name="Quadro" type="CollisionShape2D" parent="Colisoes_Cenario/Cesta"]
+position = Vector2(887.125, 301.5)
+shape = SubResource("RectangleShape2D_ofp7s")
+
+[node name="Cesta" type="CollisionShape2D" parent="Colisoes_Cenario/Cesta"]
+position = Vector2(844.75, 329)
+shape = SubResource("RectangleShape2D_p2mua")
+
+[node name="Joao" parent="." instance=ExtResource("10_we0ce")]
+position = Vector2(102.445, 97.9408)
+
+[node name="No_joao_patio" type="Node2D" parent="Joao"]
+position = Vector2(105.792, -62.1088)
+script = ExtResource("11_fon5r")
+
+[node name="Sprite2D" type="Sprite2D" parent="Joao/No_joao_patio"]
+visible = false
+scale = Vector2(1, 1)
+texture = ExtResource("6_qy804")
+
+[node name="Area2D" type="Area2D" parent="Joao/No_joao_patio"]
+position = Vector2(10.7132, 111.477)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Joao/No_joao_patio/Area2D"]
+position = Vector2(-25.4438, 22.2955)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_ssnid")

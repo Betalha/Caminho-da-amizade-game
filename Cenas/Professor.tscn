@@ -22,7 +22,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ueh40"]
-size = Vector2(9, 13)
+size = Vector2(5, 5)
 
 [node name="StaticBody2D" type="StaticBody2D" groups=["npc"]]
 
@@ -32,9 +32,9 @@ position = Vector2(0, 3.72529e-09)
 scale = Vector2(0.0189444, 0.0156798)
 sprite_frames = SubResource("SpriteFrames_sl0jd")
 autoplay = "default"
-frame = 2
-frame_progress = 0.948298
+frame = 1
+frame_progress = 0.602286
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 0.5)
+position = Vector2(-0.5, 1.5)
 shape = SubResource("RectangleShape2D_ueh40")

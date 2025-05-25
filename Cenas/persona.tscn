@@ -33,7 +33,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mikjl"]
-size = Vector2(24, 38)
+size = Vector2(15, 30)
 
 [node name="Persona" type="CharacterBody2D"]
 script = ExtResource("1_flreo")
@@ -45,5 +45,5 @@ sprite_frames = SubResource("SpriteFrames_k814m")
 animation = &"idle_frente"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -14)
+position = Vector2(-1.5, -12)
 shape = SubResource("RectangleShape2D_mikjl")

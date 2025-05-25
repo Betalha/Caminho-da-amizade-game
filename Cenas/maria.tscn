@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://7co2mtmrgy2a"]
+
+[ext_resource type="Texture2D" uid="uid://calxajexi3qwl" path="res://Assets/Sprites/characteres/Imagem26.png" id="1_bi4ol"]
+[ext_resource type="Texture2D" uid="uid://cmtsslb4j2bif" path="res://Assets/Sprites/characteres/Imagem25.png" id="2_6ef2y"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rtabl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_bi4ol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6ef2y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mph7m"]
+size = Vector2(24, 75)
+
+[node name="Maria" type="StaticBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(140.75, 81.75)
+scale = Vector2(0.0967433, 0.0831866)
+sprite_frames = SubResource("SpriteFrames_rtabl")
+autoplay = "default"
+frame_progress = 0.383339
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(143, 81.5)
+shape = SubResource("RectangleShape2D_mph7m")

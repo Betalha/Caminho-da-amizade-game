@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://bqp1kfdg8v4cn"]
+
+[ext_resource type="Texture2D" uid="uid://b0oqgqxgqo4ka" path="res://Assets/Sprites/characteres/Imagem21.png" id="1_8iqjl"]
+[ext_resource type="Texture2D" uid="uid://bppcrk4u2whjf" path="res://Assets/Sprites/characteres/Imagem22.png" id="2_lkwcp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a25dl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_8iqjl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_lkwcp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l5byo"]
+size = Vector2(26.5, 62.5)
+
+[node name="Joao" type="StaticBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(85, 68)
+scale = Vector2(0.120213, 0.0986487)
+sprite_frames = SubResource("SpriteFrames_a25dl")
+autoplay = "default"
+frame = 1
+frame_progress = 0.272365
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(86, 88)
+shape = SubResource("RectangleShape2D_l5byo")

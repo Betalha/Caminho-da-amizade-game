@@ -3,8 +3,8 @@ extends Node2D
 @onready var area_sing: Area2D = $area_sing
 
 const lines: Array[String] = [
-	"Teste testando",
-	"passando dialogo"
+	"Olá Carlos",
+	"Saia da sala, vamos para o recreio agora"
 ]
 
 func _unhandled_input(event):
