@@ -42,3 +42,7 @@ func _physics_process(delta):
 			get_tree().change_scene_to_file("res://Cenas/Patio.tscn")
 		if collider and collider.is_in_group("children1"):
 			get_tree().change_scene_to_file("res://Cenas/freeway.tscn")
+		if collider and collider.is_in_group("End_game"):
+			get_tree().change_scene_to_file("res://Cenas/tela_final.tscn")
+		if collider and collider.is_in_group("joao_game"):
+			get_tree().change_scene_to_file("res://Cenas/nv_ninja.tscn")
