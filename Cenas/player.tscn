@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://d1bvicotg8k8q"]
+[gd_scene load_steps=12 format=3 uid="uid://d1bvicotg8k8q"]
 
 [ext_resource type="Texture2D" uid="uid://o86348chk3yx" path="res://Assets/Sprites/characteres/FreeWay/Personagem Principal/Carlos.png" id="1_modv4"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_t4iod"]
+[ext_resource type="AudioStream" uid="uid://7b2mivnltg3q" path="res://Assets/Sons/Efeitos_Sonoros/Freeway/colide.wav" id="3_le5pr"]
 
 [sub_resource type="Animation" id="Animation_61aep"]
 resource_name = "Baixo"
@@ -98,6 +99,9 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lr0tw"]
 size = Vector2(11.3333, 19.3333)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qohq5"]
+size = Vector2(18, 27)
+
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_t4iod")
 
@@ -117,3 +121,14 @@ libraries = {
 position = Vector2(0.5, 10.5)
 scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_lr0tw")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 11.5)
+shape = SubResource("RectangleShape2D_qohq5")
+
+[node name="Audio_Colide" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_le5pr")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,10 +1,16 @@
 extends CharacterBody2D
 
 @onready var player_sprite: Sprite2D = $Sprite2D
+@onready var audio_colide: AudioStreamPlayer = $Audio_Colide  # Use AudioStreamPlayer (não 2D)
+var posicao_inicial: Vector2 = Vector2(558, 608)
+
 const PATIO = preload("res://Cenas/Patio.tscn")
 const JOSE = preload("res://Cenas/jose.tscn")
+
 @export var speed: float = 150.0
 
+func _ready() -> void:
+	position = posicao_inicial
 
 func _physics_process(delta: float) -> void:
 	velocity = Vector2.ZERO
@@ -37,12 +43,14 @@ func _physics_process(delta: float) -> void:
 	else:
 		$Animacao.play("Parado")
 	
-	for i in get_slide_collision_count():
-		var collision = get_slide_collision(i)
-		var collider = collision.get_collider()
-		if collider and collider.is_in_group("npc"):
-			get_tree().change_scene_to_file("res://Cenas/Patio.tscn")
-			return
-		if collider and collider.is_in_group("monstro"):
-			get_tree().change_scene_to_file("res://Cenas/freeway.tscn")
-			return
+
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("monstro"):
+		$Audio_Colide.play()
+		await $Audio_Colide.finished
+		position = posicao_inicial
+		return
+	elif body.is_in_group("npc"):
+		get_tree().change_scene_to_file("res://Cenas/Patio.tscn")

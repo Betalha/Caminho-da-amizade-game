@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://bv53mcy6bvrii"]
+[gd_scene load_steps=33 format=3 uid="uid://bv53mcy6bvrii"]
 
 [ext_resource type="Texture2D" uid="uid://chh7wv1f1ulnl" path="res://Assets/Sprites/background/Pátio Escolar em Arte Pixel.png" id="1_vhbqv"]
 [ext_resource type="PackedScene" uid="uid://hc7ea4qjlk4g" path="res://Cenas/persona.tscn" id="2_mf1db"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://Scripts/no_maria_patio.gd" id="8_oqe3b"]
 [ext_resource type="PackedScene" uid="uid://bqp1kfdg8v4cn" path="res://Cenas/joao.tscn" id="10_we0ce"]
 [ext_resource type="Script" path="res://Scripts/no_joao_patio.gd" id="11_fon5r"]
+[ext_resource type="AudioStream" uid="uid://b3ifpwtu1wd80" path="res://Assets/Sons/musica/patio/patio.wav" id="12_ru1af"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hil5q"]
 size = Vector2(27.6767, 22.4218)
@@ -22,7 +23,7 @@ size = Vector2(114.653, 128.708)
 size = Vector2(124.541, 167.216)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4081q"]
-size = Vector2(127, 122)
+size = Vector2(127, 140.627)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pl8ww"]
 size = Vector2(20.109, 886.866)
@@ -73,16 +74,16 @@ size = Vector2(265.5, 46.5)
 size = Vector2(131, 62)
 
 [node name="Sprite2D" type="Sprite2D"]
-position = Vector2(575.5, 324.5)
-scale = Vector2(0.746745, 0.62793)
+position = Vector2(576, 323.5)
+scale = Vector2(0.748698, 0.629883)
 texture = ExtResource("1_vhbqv")
 
 [node name="Persona" parent="." groups=["Player_Patio"] instance=ExtResource("2_mf1db")]
 position = Vector2(-154.671, -61.3125)
-scale = Vector2(3, 3)
+scale = Vector2(2.5, 2.5)
 
 [node name="Professor" parent="." instance=ExtResource("3_qysub")]
-position = Vector2(165.384, -82.0155)
+position = Vector2(173.419, -91.5707)
 scale = Vector2(9, 9)
 
 [node name="Children" parent="." instance=ExtResource("4_srybd")]
@@ -124,7 +125,7 @@ shape = SubResource("RectangleShape2D_ayr7k")
 
 [node name="Joao" parent="." groups=["joao_game"] instance=ExtResource("10_we0ce")]
 position = Vector2(102.445, 97.9408)
-scale = Vector2(1, 1)
+scale = Vector2(0.9, 0.9)
 
 [node name="No_joao_patio" type="Node2D" parent="Joao"]
 position = Vector2(105.792, -62.1088)
@@ -142,7 +143,7 @@ position = Vector2(-25.4438, 22.2955)
 shape = SubResource("RectangleShape2D_ssnid")
 
 [node name="professor" type="Node2D" parent="."]
-position = Vector2(164.045, -72.4603)
+position = Vector2(169.402, -215.788)
 script = ExtResource("5_0jxd5")
 
 [node name="texture" type="Sprite2D" parent="professor"]
@@ -154,7 +155,8 @@ texture = ExtResource("6_qy804")
 position = Vector2(-287.643, -484.824)
 
 [node name="collision" type="CollisionShape2D" parent="professor/area_sing"]
-position = Vector2(287.643, 480.046)
+position = Vector2(287.643, 615.412)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_4081q")
 
 [node name="Colisoes_Cenario" type="Node" parent="."]
@@ -276,3 +278,8 @@ shape = SubResource("RectangleShape2D_htqin")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Colisoes_Cenario/Colisao_saida"]
 position = Vector2(530.5, 107)
 shape = SubResource("RectangleShape2D_ocgas")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_ru1af")
+volume_db = -3.962
+autoplay = true

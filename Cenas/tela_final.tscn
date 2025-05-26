@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dx6eiwfgwvdc1"]
+[gd_scene load_steps=6 format=3 uid="uid://dx6eiwfgwvdc1"]
 
 [ext_resource type="Script" path="res://Scripts/tela_final.gd" id="1_5b57q"]
+[ext_resource type="AudioStream" uid="uid://be12mw64od1lp" path="res://Assets/Sons/musica/tela_final/endmusic.wav" id="2_k3780"]
 [ext_resource type="Texture2D" uid="uid://bcn1d8g40s1v4" path="res://Assets/Sprites/background/TelaFinal.png" id="2_sfjp5"]
 [ext_resource type="FontFile" uid="uid://dm3ch1vmt4ixr" path="res://Fonts/font.ttf" id="3_l33dk"]
+[ext_resource type="AudioStream" uid="uid://cee42h0bubusq" path="res://Assets/Sons/Efeitos_Sonoros/Menu/Menu_Out.wav" id="4_jo4db"]
 
 [node name="TelaFinal" type="MarginContainer"]
 anchors_preset = 15
@@ -12,9 +14,17 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5b57q")
 
+[node name="tema_fim" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_k3780")
+autoplay = true
+
+[node name="saida" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(498, 286)
+stream = ExtResource("4_jo4db")
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(574, 326.5)
-scale = Vector2(0.748698, 0.629883)
+position = Vector2(575, 324)
+scale = Vector2(0.75, 0.634766)
 texture = ExtResource("2_sfjp5")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]

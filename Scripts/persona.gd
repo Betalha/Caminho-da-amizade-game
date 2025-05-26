@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+@onready var sprite_2d: Sprite2D = $Sprite2D
 @export var speed: float = 200.0
 @onready var ui_layer = get_tree().get_current_scene() # ou outro node onde o balão deve ser adicionado
 var dialogo_scene = preload("res://Cenas/dialogo.tscn")
@@ -31,6 +31,19 @@ func _physics_process(delta):
 
 	# Move e depois checa colisões
 	move_and_slide()
+	
+	if velocity.y > 0:
+		$Animacao.play("Baixo")
+	elif velocity.y < 0:
+		$Animacao.play("Cima")
+	elif velocity.x > 0:
+		sprite_2d.flip_h = false
+		$Animacao.play("Correndo")
+	elif velocity.x < 0:
+		sprite_2d.flip_h = true
+		$Animacao.play("Correndo")
+	else:
+		$Animacao.play("Parado")
 
 	# Verifica colisões com NPCs
 	for i in get_slide_collision_count():
@@ -41,8 +54,8 @@ func _physics_process(delta):
 		if collider and collider.is_in_group("colisor"):
 			get_tree().change_scene_to_file("res://Cenas/Patio.tscn")
 		if collider and collider.is_in_group("children1"):
-			get_tree().change_scene_to_file("res://Cenas/freeway.tscn")
+			get_tree().call_deferred("change_scene_to_file", "res://Cenas/freeway.tscn")
 		if collider and collider.is_in_group("End_game"):
 			get_tree().change_scene_to_file("res://Cenas/tela_final.tscn")
 		if collider and collider.is_in_group("joao_game"):
-			get_tree().change_scene_to_file("res://Cenas/nv_ninja.tscn")
+			get_tree().call_deferred("change_scene_to_file", "res://Cenas/nv_ninja.tscn")

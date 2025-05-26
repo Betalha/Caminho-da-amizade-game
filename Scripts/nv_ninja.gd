@@ -25,6 +25,7 @@ func _on_shuriken_spawn_timer_timeout() -> void:
 func _on_ninja_foi_acertado() -> void:
 	count_down = 30
 	$Ninja/Label.text = str(count_down)
+	$colisao_shrk.play()
 
 func _on_count_down_timeout() -> void:
 	count_down -= 1

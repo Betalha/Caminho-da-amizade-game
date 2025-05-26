@@ -6,6 +6,7 @@ var star_spawn_x = [250, 350, 450, 550]
 
 func _ready() -> void:
 	$TimerMonstro.start()
+	$AudioStreamPlayer.play()
 
 func _on_timer_monstro_timeout() -> void:
 	var star = star_scene.instantiate()
@@ -31,3 +32,7 @@ func _on_timer_monstro_timeout() -> void:
 	star.setup(dir, 250.0)
 	star.position = pos
 	add_child(star)
+
+
+func _on_area_2d_2_body_entered(body: Node2D) -> void:
+	$AudioStreamPlayer.play()

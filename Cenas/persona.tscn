@@ -1,36 +1,99 @@
-[gd_scene load_steps=7 format=3 uid="uid://hc7ea4qjlk4g"]
+[gd_scene load_steps=10 format=3 uid="uid://hc7ea4qjlk4g"]
 
 [ext_resource type="Script" path="res://Scripts/persona.gd" id="1_flreo"]
-[ext_resource type="Texture2D" uid="uid://bkrq5p2a1165d" path="res://Assets/Sprites/characteres/joao_back.png" id="2_imvb7"]
-[ext_resource type="Texture2D" uid="uid://434oc41osvu4" path="res://Assets/Sprites/characteres/Imagem10.png" id="4_afr44"]
-[ext_resource type="Texture2D" uid="uid://b8aw8svel5hw1" path="res://Assets/Sprites/characteres/joao_right.png" id="4_l81uu"]
+[ext_resource type="Texture2D" uid="uid://o86348chk3yx" path="res://Assets/Sprites/characteres/FreeWay/Personagem Principal/Carlos.png" id="2_ndo86"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_k814m"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_imvb7")
-}],
-"loop": true,
-"name": &"Idle_costas",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_l81uu")
-}],
-"loop": true,
-"name": &"idle_direito",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_afr44")
-}],
-"loop": true,
-"name": &"idle_frente",
-"speed": 5.0
-}]
+[sub_resource type="Animation" id="Animation_61aep"]
+resource_name = "Baixo"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [18, 19, 20, 21, 22, 23]
+}
+
+[sub_resource type="Animation" id="Animation_ckb1d"]
+resource_name = "Cima"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [30, 31, 32, 33, 34, 35]
+}
+
+[sub_resource type="Animation" id="Animation_ivacb"]
+resource_name = "Correndo"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [24, 25, 26, 27, 28, 29]
+}
+
+[sub_resource type="Animation" id="Animation_opmte"]
+resource_name = "Parado"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [6, 7, 8, 9, 10, 11]
+}
+
+[sub_resource type="Animation" id="Animation_kpmtx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3pkbu"]
+_data = {
+"Baixo": SubResource("Animation_61aep"),
+"Cima": SubResource("Animation_ckb1d"),
+"Correndo": SubResource("Animation_ivacb"),
+"Parado": SubResource("Animation_opmte"),
+"RESET": SubResource("Animation_kpmtx")
+}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mikjl"]
 size = Vector2(15, 30)
@@ -38,12 +101,18 @@ size = Vector2(15, 30)
 [node name="Persona" type="CharacterBody2D"]
 script = ExtResource("1_flreo")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-2, -13)
-scale = Vector2(0.0464559, 0.0316079)
-sprite_frames = SubResource("SpriteFrames_k814m")
-animation = &"idle_frente"
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_ndo86")
+hframes = 6
+vframes = 10
+
+[node name="Animacao" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3pkbu")
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1.5, -12)
+position = Vector2(1, 10)
 shape = SubResource("RectangleShape2D_mikjl")

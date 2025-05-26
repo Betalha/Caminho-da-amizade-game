@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://bgqjjh3fw3vc0"]
+[gd_scene load_steps=26 format=3 uid="uid://bgqjjh3fw3vc0"]
 
 [ext_resource type="Texture2D" uid="uid://kgbx6x56cr5n" path="res://Assets/Sprites/background/classroom.jpg" id="1_2k7aj"]
 [ext_resource type="PackedScene" uid="uid://hc7ea4qjlk4g" path="res://Cenas/persona.tscn" id="1_wjikw"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cpoajy68l145t" path="res://Cenas/children1.tscn" id="7_7q8lv"]
 [ext_resource type="Script" path="res://Scripts/dialogo_joao_sala.gd" id="7_lbvlv"]
 [ext_resource type="PackedScene" uid="uid://7co2mtmrgy2a" path="res://Cenas/maria.tscn" id="9_orl2p"]
+[ext_resource type="AudioStream" uid="uid://glde3oi46dtp" path="res://Assets/Sons/musica/sala_de_aula/musica_sala.wav" id="12_sdpvb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c8ges"]
 size = Vector2(161, 53)
@@ -60,8 +61,8 @@ scale = Vector2(0.75, 0.632568)
 texture = ExtResource("1_2k7aj")
 
 [node name="Persona" parent="." groups=["player"] instance=ExtResource("1_wjikw")]
-position = Vector2(531, 564)
-scale = Vector2(3, 3)
+position = Vector2(521, 435)
+scale = Vector2(2.5, 2.5)
 
 [node name="Professor" parent="." instance=ExtResource("3_3tldy")]
 position = Vector2(583, 293)
@@ -75,14 +76,15 @@ shape = SubResource("RectangleShape2D_c8ges")
 
 [node name="Children" parent="." instance=ExtResource("7_7q8lv")]
 position = Vector2(394, 514)
-scale = Vector2(6, 6)
+scale = Vector2(5, 5)
 
 [node name="Maria" parent="." instance=ExtResource("9_orl2p")]
 position = Vector2(228, 276)
 scale = Vector2(1.15, 1.15)
 
 [node name="Joao" parent="." instance=ExtResource("6_8ptwo")]
-position = Vector2(595, 441)
+position = Vector2(606, 459)
+scale = Vector2(0.8, 0.8)
 
 [node name="dialogo_joao_sala" type="Node2D" parent="Joao"]
 position = Vector2(60, -11)
@@ -96,7 +98,7 @@ texture = ExtResource("5_q0imy")
 position = Vector2(57, -13)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Joao/dialogo_joao_sala/Area2D"]
-position = Vector2(-51, 93)
+position = Vector2(-58.25, 95.25)
 shape = SubResource("RectangleShape2D_3um1t")
 
 [node name="professor_sala" type="Node2D" parent="."]
@@ -228,3 +230,7 @@ position = Vector2(1.3811, 0.253555)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Colisioes_sala/Parede7"]
 position = Vector2(852, 592)
 shape = SubResource("RectangleShape2D_py8am")
+
+[node name="tema_sala" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_sdpvb")
+autoplay = true

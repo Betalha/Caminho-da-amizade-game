@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://di1ygh0swtai4"]
+[gd_scene load_steps=6 format=3 uid="uid://di1ygh0swtai4"]
 
 [ext_resource type="Script" path="res://Scripts/freeway.gd" id="1_pdg5o"]
 [ext_resource type="PackedScene" uid="uid://d1bvicotg8k8q" path="res://Cenas/player.tscn" id="2_aontj"]
 [ext_resource type="Texture2D" uid="uid://jyk1j7yjvdg" path="res://Assets/Sprites/background/ChatGPT Image 14 de mai. de 2025, 17_04_53.png" id="2_pv2wl"]
 [ext_resource type="PackedScene" uid="uid://bork0yy3xjdtd" path="res://Cenas/jose.tscn" id="3_e6h04"]
+[ext_resource type="AudioStream" uid="uid://cc2stf51o7tx1" path="res://Assets/Sons/Efeitos_Sonoros/Freeway/tema.wav" id="5_lplux"]
 
 [node name="freeway" type="Node"]
 script = ExtResource("1_pdg5o")
@@ -21,5 +22,9 @@ position = Vector2(556, 60)
 scale = Vector2(2, 2)
 
 [node name="TimerMonstro" type="Timer" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_lplux")
+autoplay = true
 
 [connection signal="timeout" from="TimerMonstro" to="." method="_on_timer_monstro_timeout"]
