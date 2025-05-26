@@ -100,7 +100,7 @@ _data = {
 size = Vector2(11.3333, 19.3333)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qohq5"]
-size = Vector2(18, 27)
+size = Vector2(19, 33.75)
 
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_t4iod")
@@ -125,7 +125,7 @@ shape = SubResource("RectangleShape2D_lr0tw")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, 11.5)
+position = Vector2(0.5, 11.125)
 shape = SubResource("RectangleShape2D_qohq5")
 
 [node name="Audio_Colide" type="AudioStreamPlayer" parent="."]
