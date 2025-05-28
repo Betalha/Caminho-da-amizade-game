@@ -31,4 +31,4 @@ func _on_count_down_timeout() -> void:
 	count_down -= 1
 	$Ninja/Label.text = str(count_down)
 	if count_down < 1:
-		get_tree().change_scene_to_file("res://Cenas/Patio.tscn")
+		get_tree().call_deferred("change_scene_to_file","res://Cenas/out_ninja.tscn")

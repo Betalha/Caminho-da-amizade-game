@@ -52,10 +52,10 @@ func _physics_process(delta):
 		if collider and collider.is_in_group("npc"):
 			pass
 		if collider and collider.is_in_group("colisor"):
-			get_tree().change_scene_to_file("res://Cenas/Patio.tscn")
+			get_tree().call_deferred("change_scene_to_file", "res://Cenas/Patio.tscn")
 		if collider and collider.is_in_group("children1"):
-			get_tree().call_deferred("change_scene_to_file", "res://Cenas/freeway.tscn")
+			get_tree().call_deferred("change_scene_to_file", "res://Cenas/menu_freeway.tscn")
 		if collider and collider.is_in_group("End_game"):
-			get_tree().change_scene_to_file("res://Cenas/tela_final.tscn")
+			get_tree().call_deferred("change_scene_to_file", "res://Cenas/tela_final.tscn")
 		if collider and collider.is_in_group("joao_game"):
-			get_tree().call_deferred("change_scene_to_file", "res://Cenas/nv_ninja.tscn")
+			get_tree().call_deferred("change_scene_to_file", "res://Cenas/menu_ninja.tscn")

@@ -4,7 +4,8 @@ extends Node2D
 
 const lines: Array[String] = [
 	"Olá Carlos",
-	"Saia da sala, vamos para o recreio agora"
+	"Seja bem vindo a nova escola, sei que pode ser dicifil se enturmar com pessoas novas"
+	,"Mas tente conversar com elas hoje, vamos para o patio do colegio agora, pode se dirigir para fora da sala"
 ]
 
 func _unhandled_input(event):

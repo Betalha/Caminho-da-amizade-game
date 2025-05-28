@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://v2ofrkdvn3vq"]
+
+[ext_resource type="Texture2D" uid="uid://c0f8fbraflcwe" path="res://Assets/Sprites/background/Floresta.png" id="1_ab1t4"]
+[ext_resource type="Script" path="res://Scripts/menu_ninja.gd" id="1_n5wbu"]
+[ext_resource type="AudioStream" uid="uid://ck0w7kjyd0xva" path="res://Assets/Sons/Efeitos_Sonoros/Menu/start.wav" id="2_24w4y"]
+[ext_resource type="AudioStream" uid="uid://b8ortwcq7fc5s" path="res://Assets/Sons/musica/tela_ninja_menu/Black Soundtrack - Main Theme.mp3" id="4_k32pb"]
+
+[node name="Menu_ninja" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n5wbu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.751302, 0.636719)
+texture = ExtResource("1_ab1t4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Game" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Desvie das Estrelas"
+
+[node name="Comecar" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Começar"
+
+[node name="play" type="AudioStreamPlayer2D" parent="VBoxContainer"]
+stream = ExtResource("2_24w4y")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_k32pb")
+volume_db = -4.685
+autoplay = true

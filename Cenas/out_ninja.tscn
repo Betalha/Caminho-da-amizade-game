@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://dlvy5atby3ow"]
+
+[ext_resource type="Script" path="res://Scripts/out_ninja.gd" id="1_3os4t"]
+[ext_resource type="Texture2D" uid="uid://c0f8fbraflcwe" path="res://Assets/Sprites/background/Floresta.png" id="2_wh5e2"]
+[ext_resource type="AudioStream" uid="uid://ck0w7kjyd0xva" path="res://Assets/Sons/Efeitos_Sonoros/Menu/start.wav" id="3_vssyu"]
+[ext_resource type="AudioStream" uid="uid://be12mw64od1lp" path="res://Assets/Sons/musica/tela_final/endmusic.wav" id="4_oro4j"]
+
+[node name="Out_Ninja" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3os4t")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.751302, 0.636719)
+texture = ExtResource("2_wh5e2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Game" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Volte para o Patio"
+
+[node name="Comecar" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Voltar"
+
+[node name="play" type="AudioStreamPlayer2D" parent="VBoxContainer"]
+stream = ExtResource("3_vssyu")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_oro4j")
+autoplay = true

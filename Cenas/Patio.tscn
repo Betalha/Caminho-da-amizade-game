@@ -156,7 +156,6 @@ position = Vector2(-287.643, -484.824)
 
 [node name="collision" type="CollisionShape2D" parent="professor/area_sing"]
 position = Vector2(287.643, 615.412)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_4081q")
 
 [node name="Colisoes_Cenario" type="Node" parent="."]

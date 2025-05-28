@@ -53,4 +53,4 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		position = posicao_inicial
 		return
 	elif body.is_in_group("npc"):
-		get_tree().change_scene_to_file("res://Cenas/Patio.tscn")
+		get_tree().change_scene_to_file("res://Cenas/out_freeway.tscn")

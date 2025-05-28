@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://dd2vsd5q4xlfm"]
+
+[ext_resource type="Texture2D" uid="uid://dfnco3o5p1wp2" path="res://Assets/Sprites/background/Captura de tela de 2025-05-28 15-59-36.png" id="1_n76iw"]
+[ext_resource type="Script" path="res://Scripts/out_freeway.gd" id="1_xcnqm"]
+[ext_resource type="AudioStream" uid="uid://ck0w7kjyd0xva" path="res://Assets/Sons/Efeitos_Sonoros/Menu/start.wav" id="2_vdixx"]
+[ext_resource type="AudioStream" uid="uid://be12mw64od1lp" path="res://Assets/Sons/musica/tela_final/endmusic.wav" id="3_q85vm"]
+
+[node name="Out_Freeway" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xcnqm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576.5, 323)
+scale = Vector2(0.898675, 1.0031)
+texture = ExtResource("1_n76iw")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Game" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Volte para o Patio"
+
+[node name="Comecar" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Voltar"
+
+[node name="play" type="AudioStreamPlayer2D" parent="VBoxContainer"]
+stream = ExtResource("2_vdixx")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_q85vm")
+autoplay = true
